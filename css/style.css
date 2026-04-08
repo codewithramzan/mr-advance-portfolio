@@ -1,0 +1,259 @@
+/* VARIABLES (DARK MODE) */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --card: #f4f4f4;
+  --primary: #3498db;
+  --hover-color: #ffffff;;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #ffffff;
+  --card: #1e293b;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial;
+  transition: 0.4s;
+  overflow-x: hidden;
+}
+/* profile logo */
+#profile-logo{
+  width: 20%;
+  border-radius: 50%;
+}
+/* NAVBAR */
+#navbar {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+#navbar .nav-links {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+  margin-right: 50px;
+  justify-content: right;
+
+}
+#navbar a{
+  transition: 0.3s ease;
+  box-sizing: border-box;
+   padding: 8px;
+}
+#navbar a:hover{
+  color: var(--hover-color);
+  border: 1px solid rgb(199, 106, 73);
+  transform: translateY(-5px);
+  border-radius: 4px;
+ }
+ #navbar.scrolled {
+  background: #fff;
+  color: black;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#navbar.scrolled a {
+  color: black;
+}
+
+
+#navbar a, #theme-toggle {
+  text-decoration: none;
+  color: var(--text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* MOBILE MENU */
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.dark {
+  background: #f4f4f4;
+}
+
+
+/* GRID */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+  width: 250px;
+  padding: 20px;
+  background: var(--card);
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-12px);
+}
+
+/* SKILLS */
+.bar {
+  width: 80%;
+  margin: auto;
+  background: #ddd;
+  height: 10px;
+}
+
+.fill {
+  height: 10px;
+  width: 0;
+  transition: 1s;
+}
+
+.html { width: 90%; background: red; }
+.css { width: 80%; background: blue; }
+.js { width: 70%; background: green; }
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FORM */
+input, textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-dark{
+  background: linear-gradient(135deg, #3498db, #2c3e50) !important;
+}
+  #navbar .nav-links {
+  display: none;
+}
+/* mobile navbar */
+#navbar .active{
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    background-color: white;
+    flex-direction: column;
+    width: 90px;
+    font-size: 22px;
+    padding: 18px;
+    display: flex;
+    gap: 10px;
+    border-radius: 10px 0px 10px 10px;
+    animation: fadeIn 0.3s ease;
+}
+
+#profile-logo{
+  width: 50%;
+}
+
+  #menu-toggle {
+    display: block;
+    margin-right: 50px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .gallery img {
+    width: 90%;
+  }
+}
+/* footer */
+footer{
+text-align:center;
+padding:20px;
+background:#678584;
+color: white;
+margin-top:40px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

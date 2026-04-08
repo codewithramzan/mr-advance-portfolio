@@ -1,0 +1,29 @@
+.theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* DARK MODE */
+body.dark {
+    background: #121212;
+}
+body.dark .header, 
+body.dark .container {
+    background: #1e1e1e;
+    color: white;
+}
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background: #2c2c2c;
+    color: white;
+    border: 1px solid #555;
+}
+body.dark #h2, 
+body.dark h3,
+body.dark h1{
+  color: white;
+}
